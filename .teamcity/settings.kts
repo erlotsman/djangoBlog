@@ -3,7 +3,6 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.dockerSupport
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerRegistry
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.VcsTrigger
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
 /*
@@ -73,15 +72,8 @@ object Build : BuildType({
 
     triggers {
         vcs {
-            quietPeriodMode = VcsTrigger.QuietPeriodMode.USE_CUSTOM
-            quietPeriod = 1
             triggerRules = "+:."
-            branchFilter = """
-                +:refs/heads/stage
-                +:stage
-            """.trimIndent()
-            perCheckinTriggering = true
-            groupCheckinsByCommitter = true
+            branchFilter = "+:+"
             enableQueueOptimization = false
         }
     }
