@@ -90,10 +90,6 @@ object Build : BuildType({
                 authType = token {
                     token = "credentialsJSON:5ad8b8fb-0bc8-4ffc-a253-266da648236f"
                 }
-                filterSourceBranch = """
-                    develop
-                    stage
-                """.trimIndent()
                 filterTargetBranch = """
                     master
                     stage
