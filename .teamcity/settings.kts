@@ -73,7 +73,7 @@ object Build : BuildType({
     triggers {
         vcs {
             triggerRules = "+:."
-            branchFilter = "+:refs/head/stage"
+            branchFilter = "+:refs/heads/stage"
         }
     }
 
