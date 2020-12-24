@@ -5,7 +5,6 @@ import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.pullRequests
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildFeatures.vcsLabeling
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.dockerCommand
 import jetbrains.buildServer.configs.kotlin.v2019_2.projectFeatures.dockerRegistry
-import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.vcs
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -69,11 +68,6 @@ object Build : BuildType({
             commandType = push {
                 namesAndTags = "revolyram/djangoblog:%teamcity.build.branch%-%build.number%"
             }
-        }
-    }
-
-    triggers {
-        vcs {
         }
     }
 
