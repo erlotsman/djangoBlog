@@ -51,7 +51,7 @@ object Build : BuildType({
         root(DslContext.settingsRoot)
 
         branchFilter = """
-            +:<default>
+            +:master
             +:stage
             +:develop
         """.trimIndent()
