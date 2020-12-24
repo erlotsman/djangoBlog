@@ -53,6 +53,7 @@ object Build : BuildType({
         branchFilter = """
             +:<default>
             +:stage
+            +:develop
         """.trimIndent()
     }
 
