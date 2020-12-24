@@ -72,7 +72,6 @@ object Build : BuildType({
 
     triggers {
         vcs {
-            branchFilter = "+:+"
             enableQueueOptimization = false
         }
     }
