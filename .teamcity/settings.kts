@@ -73,7 +73,10 @@ object Build : BuildType({
     triggers {
         vcs {
             triggerRules = "+:."
-            branchFilter = "+:refs/heads/stage"
+            branchFilter = """
+                +:refs/heads/stage
+                +:stage
+            """.trimIndent()
         }
     }
 
